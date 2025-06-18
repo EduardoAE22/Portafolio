@@ -2,50 +2,100 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio - Tu Nombre</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Portafolio - Eduardo AE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .navbar, .footer {
+      background-color: #1f1f1f;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+    }
+    .card-title, .card-text {
+      color: #fff;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    a, a:hover {
+      color: #0dcaf0;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hola, soy Eduardo Acosta</h1>
-    <p>Desarrollador Web Freelance</p>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Eduardo AE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="text-center py-5">
+    <h1 class="display-4">Hola, soy Eduardo</h1>
+    <p class="lead">Desarrollador web en formación | Apasionado por el diseño funcional</p>
   </header>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy desarrollador web enfocado en crear sitios rápidos, funcionales y accesibles para negocios locales.</p>
+  <!-- Sobre mí -->
+  <section class="container py-4" id="sobre-mi">
+    <h2 class="mb-3">Sobre mí</h2>
+    <p>Soy un desarrollador web independiente con enfoque en crear páginas simples, efectivas y rápidas para negocios locales. Actualmente me especializo en HTML, CSS y JavaScript.</p>
   </section>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
+  <!-- Proyectos -->
+  <section class="container py-4" id="proyectos">
+    <h2 class="mb-4">Mis proyectos</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <img src="img/proyecto1.png" class="card-img-top" alt="Proyecto 1">
+          <div class="card-body">
+            <h5 class="card-title">Landing Page Negocio</h5>
+            <p class="card-text">Página web para negocios locales con mapa, contacto y galería.</p>
+            <a href="#" class="btn btn-primary btn-sm" target="_blank">Ver demo</a>
+            <a href="#" class="btn btn-outline-light btn-sm" target="_blank">Código fuente</a>
+          </div>
+        </div>
+      </div>
+      <!-- Puedes duplicar este bloque para más proyectos -->
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="container py-4" id="contacto">
+    <h2 class="mb-3">Contacto</h2>
+    <p>¿Te interesa una página para tu negocio o colaboración? Escríbeme:</p>
     <ul>
-      <li>Diseño de páginas web para negocios</li>
-      <li>Menús digitales con QR</li>
-      <li>Landing pages para cursos o eventos</li>
-      <li>Catálogos o portafolios para emprendedores</li>
+      <li>Email: <a href="mailto:cesar.e.a.echavarria@gmail.com">cesar.e.a.echavarria@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/eduardoae22" target="_blank">github.com/eduardoae22</a></li>
+      <li>WhatsApp: <a href="https://wa.me/529381356996" target="_blank">Envíame mensaje</a></li>
     </ul>
   </section>
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <div class="proyecto">
-      <h3>Página para Taquería "El Fogón"</h3>
-      <p>Diseño responsivo con menú, galería y botón de WhatsApp.</p>
-    </div>
-    <!-- Puedes duplicar este bloque para más proyectos -->
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Te interesa una página web? Escríbeme por WhatsApp.</p>
-    <a href="https://wa.me/529381356996" class="btn">Contáctame</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 - Tu Nombre</p>
+  <!-- Footer -->
+  <footer class="footer text-center py-3 mt-5">
+    <small>© 2025 Eduardo AE | Desarrollado con ❤️ y Bootstrap</small>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
