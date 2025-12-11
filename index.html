@@ -1,134 +1,459 @@
 <!DOCTYPE html>
 <html lang="es">
-<header class="hero">
-  <div class="hero-content">
-    <h1>Diseño Web Profesional</h1>
-    <p>Tu negocio online desde $250 pesos</p>
-    <a href="https://wa.me/529381356996" target="_blank" class="btn-cta">Contáctame por WhatsApp</a>
-  </div>
-</header>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Portafolio - Eduardo Acosta</title>
+  <meta name="description" content="Portafolio de Eduardo Acosta (Acosta Solutions). Desarrollo de landing pages, tiendas en línea y sistemas tipo ERP para negocios locales como tortillerías, purificadoras y marcas de ropa.">
+  <title>Portafolio - Eduardo Acosta | Desarrollo Web</title>
+
+  <!-- Fuentes y Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      background-color: #121212;
-      color: #ffffff;
-    }
-    .navbar, .footer {
-      background-color: #1f1f1f;
-    }
-    .card {
-      background-color: #1e1e1e;
-      border: none;
-    }
-    .card-title, .card-text {
-      color: #fff;
-    }
-    .btn-primary {
-      background-color: #007bff;
-      border: none;
-    }
-    a, a:hover {
-      color: #0dcaf0;
-      text-decoration: none;
-    }
-    .footer {
-  background-color: var(--color-primario);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-  </style>
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark glass-nav">
     <div class="container">
-      <a class="navbar-brand" href="#">Eduardo Acosta</a>
+      <a class="navbar-brand fw-bold" href="#inicio">
+        <img src="img/acosta_solutions_logo.jpeg" alt="Acosta Solutions" loading="lazy" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">Eduardo Acosta· Acosta Solutions</span>
+        <span class="brand-sub">Desarrollo de software</span>
+      </div>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="https://github.com/EduardoAE22" target="_blank" class="btn btn-outline-light btn-sm">
+              GitHub
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="text-center py-5">
-    <h1 class="display-4">Hola, soy Eduardo</h1>
-    <p class="lead">Desarrollador web en formación | Apasionado por el diseño funcional</p>
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <p class="hero-kicker">Acosta Solutions · Desarrollo de software</p>
+          <h1 class="hero-title">
+            Soluciones web y sistemas a la medida
+            para negocios locales y pymes.
+          </h1>
+          <p class="hero-subtitle">
+            Creamos landing pages, tiendas en línea y sistemas tipo ERP
+            como los proyectos La Negrita Stitch House y los ERPs para tortillería
+            y purificadora. Desde ideas pequeñas hasta herramientas que organizan
+            todo tu negocio.
+          </p>
+          <h2 class="hero-title">Landing page básica desde <span>$250 MXN</span> hasta sistemas a la medida.</h2>
+          <div class="hero-actions">
+            <a href="https://wa.me/529381356996" target="_blank" class="btn btn-cta">
+              Hablar por WhatsApp
+            </a>
+            <a href="#proyectos" class="btn btn-outline-light btn-ghost">
+              Ver proyectos
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-number">3+</span>
+              <span class="metric-label">Proyectos reales</span>
+            </div>
+            <div class="metric">
+              <span class="metric-number">2</span>
+              <span class="metric-label">Sistemas tipo ERP</span>
+            </div>
+            <div class="metric">
+              <span class="metric-number">1</span>
+              <span class="metric-label">Portafolio en crecimiento</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="hero-card">
+            <p class="hero-card-title">¿Qué obtienes?</p>
+            <ul class="hero-card-list">
+              <li>Sitio optimizado para celular y computadora.</li>
+              <li>Botones directos a WhatsApp y redes.</li>
+              <li>Diseño limpio y profesional (no plantillas genéricas).</li>
+              <li>Entrega rápida y soporte para cambios básicos.</li>
+            </ul>
+            <p class="hero-card-foot">
+              Ideal para negocios locales, deportes, tiendas de ropa y servicios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <section class="container py-4" id="sobre-mi">
-    <h2 class="mb-3">Sobre mí</h2>
-    <p>Soy un desarrollador web independiente con enfoque en crear páginas simples, efectivas y rápidas para negocios locales. Actualmente me especializo en HTML, CSS y JavaScript.</p>
-  </section>
-  
-<section class="card">
-  <h2>¿Qué servicios ofrezco?</h2>
-  <p>Landing pages, catálogos simples, páginas con WhatsApp.</p>
-</section>
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section-padding bg-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Servicios</h2>
+        <p>Lo que puedo hacer por tu negocio hoy mismo.</p>
+      </div>
 
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3>Landing page básica</h3>
+            <p>
+              Página de una sola sección para presentar tu negocio,
+              horarios, ubicación y botón de contacto.
+            </p>
+            <ul>
+              <li>Desde <strong>$250 MXN</strong></li>
+              <li>Ideal para negocios locales</li>
+              <li>Entrega rápida</li>
+            </ul>
+          </div>
+        </div>
 
-  <section class="container py-4" id="proyectos">
-    <h2 class="mb-4">Mis proyectos</h2>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card h-100">
-          <img src="img/proyecto1.png" class="card-img-top" alt="Proyecto 1">
-          <div class="card-body">
-            <h5 class="card-title">Landing Page Negocio</h5>
-            <p class="card-text">Página web para negocios locales con mapa, contacto y galería.</p>
-            <a href="proyectos/landing-negocio.html" class="btn btn-primary btn-sm" target="_blank">Ver demo</a>
-            <a href="https://github.com/eduardoae22/landing-negocio" class="btn btn-outline-light btn-sm" target="_blank">Código fuente</a>
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3>Sitio web completo</h3>
+            <p>
+              Varias secciones con galería, servicios, testimonios
+              y formularios de contacto sencillos.
+            </p>
+            <ul>
+              <li>Diseño a medida</li>
+              <li>Adaptado a tu marca</li>
+              <li>Listo para conectar a tu dominio</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <h3>Sistemas tipo ERP</h3>
+            <p>
+              Soluciones personalizadas para control de pedidos,
+              clientes, inventario y flujo de trabajo.
+            </p>
+            <ul>
+              <li>Purificadoras</li>
+              <li>Tortillerías</li>
+              <li>Negocios con reparto y registros diarios</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="container py-4" id="contacto">
-    <h2 class="mb-3">Contacto</h2>
-    <p>¿Te interesa una página para tu negocio o colaboración? Escríbeme:</p>
-    <ul>
-      <li>Email: <a href="mailto:cesar.e.a.echavarria@gmail.com">cesar.e.a.echavarria@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/eduardoae22" target="_blank">github.com/eduardoae22</a></li>
-      <li>WhatsApp: <a href="https://wa.me/529381356996" target="_blank">Envíame mensaje</a></li>
-    </ul>
+  <p class="text-center" style="font-size: 0.85rem; color:#9ca3af;">
+    Tecnologías principales: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, 
+    <strong>Flutter</strong>, <strong>Dart</strong>, Supabase (PostgreSQL, RLS, APIs), SQLite, consumo de APIs REST.
+  </p>
+
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Proyectos destacados</h2>
+        <p>Trabajo ya realizado para negocios y proyectos reales.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Proyecto 1: La Negrita Stitch House -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card h-100">
+            <div class="project-thumb">
+              <!-- Puedes poner un screenshot tuyo en img/proyecto-lanegrita.png -->
+              <img src="img/proyecto-lanegrita.png" alt="La Negrita Stitch House - tienda artesanal" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>La Negrita Stitch House</h3>
+              <p>
+                Tienda online para una marca de ropa y accesorios hechos a mano. 
+                Desarrollé un sitio donde la familia puede <strong>subir y editar productos</strong>, 
+                organizar el catálogo por categorías y recibir pedidos directamente 
+                por <strong>WhatsApp</strong>.
+              </p>
+              
+              <p class="project-meta">
+                <strong>Rol:</strong> Diseño y desarrollo front-end · 
+                <strong>Cliente:</strong> Negocio familiar real · 
+                <strong>Estado:</strong> Listo para vender, cargando catálogo.
+                <strong>Stack:</strong> Supabase (PostgreSQL con RLS)
+              </p>
+
+              <div class="project-tags">
+                <span>E-commerce</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://eduardoae22.github.io/LaNegritaStitchHouse/" target="_blank" class="btn btn-sm btn-primary">
+                Ver sitio en vivo
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Proyecto 2: ERP tortillería -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card h-100">
+            <div class="project-thumb">
+              <!-- Pon aquí un screenshot de la app -->
+              <img src="img/proyecto-tortilleria.png" alt="ERP para tortillería con reparto" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>ERP tortillería con reparto</h3>
+              <p>
+                Aplicación móvil tipo ERP para una tortillería con reparto. 
+                Permite controlar <strong>cargas a repartidores, ventas por cliente, 
+                devoluciones, fiado y corte de caja diario</strong>. 
+                El sistema está pensado para reemplazar <strong>libretas y apuntes</strong> 
+                y tener reportes por ruta y producto.
+              </p>
+              
+              <p class="project-meta">
+                <strong>Rol:</strong> Análisis de procesos, diseño de pantallas y desarrollo en Flutter · 
+                <strong>Stack:</strong> Flutter, Dart, SQLite (local) · 
+                <strong>Estado:</strong> ~90 % funcional (MVP completo, listo para refinamiento).
+                <strong>Stack:</strong> Flutter, Dart, Supabase (PostgreSQL con RLS)
+              </p>
+
+              <div class="project-tags">
+                <span>Flutter</span>
+                <span>SQLite</span>
+                <span>ERP</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/EduardoAE22/app_tortilleria" target="_blank" class="btn btn-sm btn-outline-light">
+                Ver código
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Proyecto 3: ERP purificadora (MVP) -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card h-100">
+            <div class="project-thumb">
+              <!-- Screenshot de la app o un mockup -->
+              <img src="img/proyecto-purificadora.png" alt="ERP para purificadora de agua" loading="lazy">
+            </div>
+            <div class="project-body">
+              <h3>ERP purificadora de agua (MVP)</h3>
+              <p>
+                Aplicación móvil para una purificadora de agua con reparto a domicilio. 
+                Gestiona <strong>clientes, pedidos, rutas</strong> y el control de <strong>garrafones 
+                entregados y devueltos</strong>, así como los <strong>adeudos por cliente</strong>. 
+                El foco principal es reducir pérdidas de garrafones y ordenar la cobranza diaria.
+              </p>
+
+              <p class="project-meta">
+                <strong>Rol:</strong> Definición de modelo de datos y desarrollo de pantallas principales · 
+                <strong>Stack:</strong> Flutter, Dart · 
+                <strong>Estado:</strong> MVP en desarrollo (pausado por temas de presupuesto del cliente).
+              </p>
+
+              <div class="project-tags">
+                <span>Flutter</span>
+                <span>Mobile</span>
+                <span>ERP</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/EduardoAE22/app_purificadora" target="_blank" class="btn btn-sm btn-outline-light">
+                Ver código
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Proyecto 4: Mi portafolio -->
+         <div class="col-md-6 col-lg-4">
+          <article class="project-card h-100">
+            <div class="project-thumb">
+              <img src="img/proyecto-portafolio.png" alt="Portafolio Acosta Solutions">
+            </div>
+            <div class="project-body">
+              <h3>Portafolio · Acosta Solutions</h3>
+              <p>
+                Sitio web personal desarrollado en <strong>HTML y CSS puros</strong> 
+                para presentar mis servicios, proyectos y datos de contacto. 
+                Diseñado con enfoque en <strong>claridad, carga rápida y versión móvil</strong>.
+              </p>
+              <p class="project-meta">
+                <strong>Rol:</strong> Diseño, maquetación y contenido · 
+                <strong>Stack:</strong> HTML, CSS, Bootstrap · 
+                <strong>Estado:</strong> En mejora continua.
+              </p>
+              <div class="project-tags">
+                <span>Portafolio</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://eduardoae22.github.io/Portafolio/" target="_blank" class="btn btn-sm btn-primary">
+                Ver portafolio
+              </a>
+            </div>
+          </article>
+        </div>
+
+        
+        <!-- Proyecto 3: Sistemas ERP (GitHub) 
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card h-100">
+            <div class="project-placeholder">
+              <span class="badge bg-secondary mb-2">Código</span>
+              <h3>ERP Tortillería & Purificadora</h3>
+              <p>
+                Sistemas en desarrollo para control de clientes,
+                rutas, pedidos y cobros diarios.
+              </p>
+              <div class="project-tags">
+                <span>JavaScript</span>
+                <span>Firebase / APIs</span>
+                <span>Arquitectura por módulos</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/EduardoAE22" target="_blank" class="btn btn-sm btn-outline-light">
+                Ver repositorios
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>-->
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="section-padding bg-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="section-header text-start">
+            <h2>Sobre Acosta Solutions</h2>
+            <p>Software hecho para negocios reales.</p>
+          </div>
+          <p>
+            En <strong>Acosta Solutions</strong> desarrollamos soluciones web y apps
+          enfocadas en la operación diaria de negocios reales: tiendas de ropa,
+          tortillerías, purificadoras y equipos deportivos, entre otros.
+          </p>
+          <p>
+            El estudio está liderado por <strong>Eduardo Acosta</strong>, desarrollador
+          web jr con experiencia construyendo landing pages, tiendas online y
+          sistemas tipo ERP que reemplazan libretas y hojas de cálculo.
+          </p>
+          <ul class="stack-list">
+            <li>Landing pages optimizadas para celular</li>
+          <li>Tiendas online artesanales con panel admin</li>
+          <li>ERPs ligeros para controlar ventas, rutas y caja</li>
+          <li>Integraciones con WhatsApp, mapas y reportes</li>
+          </ul>
+        </div>
+        <div class="col-lg-5 ms-lg-auto">
+          <div class="about-card">
+            <p class="about-title">Lo que me importa:</p>
+            <ul>
+              <li>Que tu cliente entienda qué haces en segundos.</li>
+              <li>Que tu página cargue rápido en cualquier celular.</li>
+              <li>Que al final del día tu sitio te genere contactos y ventas.</li>
+            </ul>
+            <p class="about-foot">
+              Si tienes un negocio y no sabes por dónde empezar con tu página,
+              te asesoro sin compromiso.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer text-center py-3 mt-5">
-    <small>© 2025 Eduardo AE | Desarrollado con ❤️ y Bootstrap</small>
+  <!-- CONTACTO -->
+  <section id="contacto" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contacto</h2>
+        <p>Listo para trabajar en tu proyecto o para una entrevista.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="contact-card">
+            <h3>Correo</h3>
+            <p>
+              <a href="mailto:cesar.e.a.echavarria@gmail.com">
+                cesar.e.a.echavarria@gmail.com
+              </a>
+            </p>
+            <span class="contact-label">Ideal para enviar requerimientos o CV.</span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-card">
+            <h3>WhatsApp</h3>
+            <p>
+              <a href="https://wa.me/529381356996" target="_blank">
+                Enviar mensaje directo
+              </a>
+            </p>
+            <span class="contact-label">Respondo mensajes de 9:00 a 21:00 hrs.</span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-card">
+            <h3>GitHub</h3>
+            <p>
+              <a href="https://github.com/EduardoAE22" target="_blank">
+                github.com/EduardoAE22
+              </a>
+            </p>
+            <span class="contact-label">Código de sistemas y proyectos personales.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <small>© 2025 César Eduardo Acosta Echavarría· Desarrollo Web | Acosta Solutions</small>
+      <small>Hecho con ❤️, café y muchas ganas de aprender.</small>
+    </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <footer class="footer">
-  <p>© 2025 Eduardo Acosta | Diseño Web Freelancer</p>
-</footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-<div class="col-md-6 col-lg-4 mb-4">
-  <div class="card h-100">
-    <img src="proyectos/BORREGOSFLAG/img/equipo1.jpg" class="card-img-top" alt="BORREGOSFLAG">
-    <div class="card-body">
-      <h5 class="card-title">BORREGOSFLAG</h5>
-      <p class="card-text">Landing page para un equipo de flag football en Ciudad del Carmen, Campeche.</p>
-      <a href="proyectos\borregos-flag.html" class="btn btn-primary btn-sm" target="_blank">Ver demo</a>
-    </div>
-  </div>
-</div>
