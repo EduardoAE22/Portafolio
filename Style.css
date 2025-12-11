@@ -324,22 +324,33 @@ body {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
 }
 
+/* THUMB DE PROYECTOS: pensado para logos/ilustraciones */
 .project-thumb {
   position: relative;
-  overflow: hidden;
-  max-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background: #020617;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
+/* Que siempre se vea TODO el logo */
 .project-thumb img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 180px;
+  height: auto;
+  object-fit: contain;
   display: block;
-  object-fit: cover;
-  transform: scale(1.02);
-  transition: transform 0.4s ease;
+  border-radius: 0.75rem;
+  transform: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* Hover suave sin recortar */
 .project-card:hover .project-thumb img {
-  transform: scale(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
 }
 
 .project-body {
