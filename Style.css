@@ -1,13 +1,13 @@
 :root {
-  --color-primario: #0d74ff;      /* azul principal del logo */
+  --color-primario: #0d74ff;
   --color-secundario: #020617;
-  --color-acento: #ff8a00;        /* naranja del logo */
+  --color-acento: #ff8a00;
   --color-texto: #E5E7EB;
   --color-blanco: #ffffff;
   --color-fondo: #020617;
 }
 
-/* RESET BÁSICO */
+/* RESET BASICO */
 *,
 *::before,
 *::after {
@@ -37,22 +37,7 @@ body {
   align-items: center;
   gap: 0.4rem;
   font-size: 1rem;
-}
-
-.logo-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #a5b4fc, #1d4ed8);
-}
-
-.logo-tag {
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  text-decoration: none;
 }
 
 .nav-link {
@@ -90,7 +75,6 @@ body {
   letter-spacing: 0.16em;
   opacity: 0.8;
 }
-
 
 /* HERO */
 .hero {
@@ -138,22 +122,48 @@ body {
   color: #e5e7eb;
 }
 
-.hero-title span {
-  color: var(--color-acento);
-}
-
 .hero-subtitle {
   font-size: 0.98rem;
   max-width: 34rem;
   color: #cbd5f5;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* HERO OFFER (reduce redundancy) */
+.hero-offer{
+  margin: 14px 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.offer-label{
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.price-badge{
+  display: inline-block;
+  padding: .18em .55em;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  white-space: nowrap;
+  font-weight: 800;
+  color: var(--color-acento);
+}
+
+.offer-note{
+  opacity: .75;
+  font-size: .9rem;
+  white-space: nowrap;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .btn-cta {
@@ -178,7 +188,7 @@ body {
   border-width: 1px;
 }
 
-/* Métricas hero */
+/* Metricas hero */
 .hero-metrics {
   display: flex;
   flex-wrap: wrap;
@@ -225,24 +235,29 @@ body {
   margin-bottom: 0.9rem;
 }
 
-.hero-card-list {
+/* BENEFITS LIST: sin simbolos raros */
+.benefits-list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0 0 1rem;
-  font-size: 0.9rem;
 }
 
-.hero-card-list li {
+.benefits-list li {
   position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.55rem;
+  padding-left: 22px;
+  margin: 12px 0;
 }
 
-.hero-card-list li::before {
-  content: "•";
+.benefits-list li::before {
+  content: "";
   position: absolute;
-  left: 0.2rem;
-  color: #22c55e;
+  left: 0;
+  top: 0.45em;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
 }
 
 .hero-card-foot {
@@ -307,9 +322,22 @@ body {
   color: #e5e7eb;
 }
 
+.service-card li {
+  position: relative;
+  padding-left: 16px;
+  margin: 8px 0;
+}
+
 .service-card li::before {
-  content: "▹ ";
-  color: var(--color-acento);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--color-acento);
+  opacity: 0.95;
 }
 
 /* PROYECTOS */
@@ -324,7 +352,6 @@ body {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
 }
 
-/* THUMB DE PROYECTOS: pensado para logos/ilustraciones */
 .project-thumb {
   position: relative;
   display: flex;
@@ -335,7 +362,6 @@ body {
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
-/* Que siempre se vea TODO el logo */
 .project-thumb img {
   max-width: 100%;
   max-height: 180px;
@@ -347,7 +373,6 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover suave sin recortar */
 .project-card:hover .project-thumb img {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
@@ -387,11 +412,9 @@ body {
   padding: 0.9rem 1.3rem 1.1rem;
   border-top: 1px solid rgba(148, 163, 184, 0.35);
   display: flex;
+  gap: .6rem;
   justify-content: flex-end;
-}
-
-.project-placeholder {
-  padding: 1.4rem 1.3rem 1rem;
+  flex-wrap: wrap;
 }
 
 .project-meta {
@@ -400,8 +423,7 @@ body {
   color: #9ca3af;
 }
 
-
-/* SOBRE MI */
+/* SOBRE MI / STACK LIST */
 .stack-list {
   list-style: none;
   padding: 0;
@@ -409,9 +431,21 @@ body {
   font-size: 0.9rem;
 }
 
+.stack-list li {
+  position: relative;
+  padding-left: 16px;
+  margin: 10px 0;
+}
+
 .stack-list li::before {
-  content: "▹ ";
-  color: var(--color-acento);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--color-acento);
 }
 
 .about-card {
@@ -420,7 +454,14 @@ body {
   padding: 1.6rem 1.4rem;
   border: 1px solid rgba(148, 163, 184, 0.4);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: #E5E7EB;
+}
+
+.about-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: .6rem;
+  color: #E5E7EB;
 }
 
 .about-title {
@@ -432,12 +473,12 @@ body {
 }
 
 .about-card ul {
-  padding-left: 1.1rem;
+  padding-left: 0;
   margin-bottom: 0.7rem;
 }
 
 .about-foot {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #9ca3af;
 }
 
@@ -483,6 +524,15 @@ body {
   color: #9ca3af;
 }
 
+/* CASE PAGES (casos de estudio) */
+.case-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.14), transparent 55%),
+    linear-gradient(145deg, #020617, #020617);
+}
+
 /* RESPONSIVE */
 @media (max-width: 991.98px) {
   .hero {
@@ -491,10 +541,6 @@ body {
 
   .hero-title {
     font-size: 1.9rem;
-  }
-
-  .hero-inner {
-    text-align: left;
   }
 }
 
@@ -510,4 +556,11 @@ body {
   .section-padding {
     padding: 3.25rem 0;
   }
+}
+
+.tech-note{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
 }
